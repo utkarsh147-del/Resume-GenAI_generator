@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResumeBuilderAI - Enable 2FA</title>
+    <link rel="stylesheet" href="enable2fastyles.css">
+</head>
+<body>
+    <div class="enable2fa-container">
+        <h1>Enable Two-Factor Authentication</h1>
+        <p>Scan the QR code below with your authenticator app (e.g., Google Authenticator).</p>
+        <div id="qrCode" style="margin: 20px 0;"></div>
+        <button onclick="goToVerify2FA()">Next</button>
+        <button onclick="goToLogin()">Back to Login</button>
+        <p id="message"></p>
+    </div>
+    <script src="enable2fascript.js"></script>
+</body>
+</html>

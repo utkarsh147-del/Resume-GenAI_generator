@@ -1,0 +1,201 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.dashboard-container, .resumebuilder-container, .savedresumes-container, .editresume-container {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    position: relative;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+
+#welcomeMessage {
+    color: #7f8c8d;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #7f8c8d;
+}
+
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+button {
+    padding: 12px 25px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+button[type="button"], button {
+    background-color: #2ecc71;
+    color: white;
+}
+
+button:hover {
+    background-color: #27ae60;
+}
+
+.dashboard-actions button:first-child {
+    background-color: #3498db;
+    color: white;
+}
+
+.dashboard-actions button:first-child:hover {
+    background-color: #2980b9;
+}
+
+.dashboard-actions button:last-child {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.dashboard-actions button:last-child:hover {
+    background-color: #c0392b;
+}
+
+#message {
+    color: #e74c3c;
+    margin-top: 10px;
+}
+
+#resumePreview, #resumeContent {
+    background-color: white;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    word-break: break-all !important; /* Force break */
+    overflow-wrap: break-word !important; /* Ensure wrapping */
+    white-space: pre-wrap; /* Preserve spaces but allow wrapping */
+    max-height: 1200px;
+    max-width: 1000px !important; /* Enforce width */
+    width: 100%; /* Ensure it takes full width of container */
+    overflow-y: auto;
+    box-sizing: border-box; /* Include padding in width */
+    position: relative;
+}
+
+#resumeContent pre {
+    margin: 0;
+    padding: 0;
+    word-break: break-all !important; /* Apply to pre content */
+    overflow-wrap: break-word !important; /* Apply to pre content */
+}
+
+#resumeContent ul, #resumeContent ol {
+    margin-left: 20px;
+}
+
+#resumeContent h2, #resumeContent h3 {
+    margin: 10px 0;
+    border-bottom: 1px dashed #ddd; /* Breakpoint between sections */
+}
+
+#resumeList {
+    background-color: white;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#resumeList ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#resumeList ul li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+
+#resumeList ul li:hover {
+    background-color: #f0f0f0;
+}
+
+.dialog {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.dialog input {
+    width: 200px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.dialog button {
+    padding: 8px 15px;
+    margin: 0 5px;
+    width: auto;
+}
+
+.download-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: #3498db;
+    cursor: pointer;
+}
+
+.download-icon:hover {
+    color: #2980b9;
+}
+
+#resumeContent .loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: #3498db;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
