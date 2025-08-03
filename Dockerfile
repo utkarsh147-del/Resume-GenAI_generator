@@ -4,7 +4,7 @@ WORKDIR /app
 COPY pom.xml .
 RUN mvn dependency:go-offline
 COPY . .
-RUN mvn clean package -DskipTests
+RUN mvn clean package 
 
 # Run Stage
 FROM eclipse-temurin:17-jdk-jammy
