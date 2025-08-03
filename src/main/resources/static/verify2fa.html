@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResumeBuilderAI - Verify 2FA</title>
+    <link rel="stylesheet" href="verifysyless.css">
+</head>
+<body>
+    <div class="verify2fa-container">
+        <h1>Verify Two-Factor Authentication</h1>
+        <p>Enter the 6-digit code from your authenticator app.</p>
+        <form id="verify2FAForm">
+            <div class="form-group">
+                <label for="totpCode">2FA Code:</label>
+                <input type="text" id="totpCode" name="totpCode" required maxlength="6">
+            </div>
+            <button type="submit">Verify</button>
+        </form>
+        <button onclick="goToLogin()">Back to Login</button>
+        <p id="message"></p>
+    </div>
+    <script src="verify2fascript.js"></script>
+</body>
+</html>
