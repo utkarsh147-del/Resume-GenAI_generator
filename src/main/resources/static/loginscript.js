@@ -32,7 +32,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     }
 
     // API call to /user/login
-    fetch("http://localhost:8024/public/login", {
+    fetch("/public/login", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
