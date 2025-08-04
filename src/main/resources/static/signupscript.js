@@ -15,7 +15,7 @@ document.getElementById("signupForm").addEventListener("submit", function(event)
     }
 
     // API call to backend
-    fetch("http://localhost:8024/public/signup", {
+    fetch("/public/signup", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
