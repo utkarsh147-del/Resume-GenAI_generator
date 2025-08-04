@@ -41,20 +41,20 @@ public class ResumeController {
         if (user == null) {
             return ResponseEntity.status(404).body("User not found");
         }
-//        if (user.getResumeData() == null) {
-//            user.setResumeData(new Resume());
-//        }
+       if (user.getResumeData() == null) {
+           user.setResumeData(new Resume());
+       }
       
         
-//        System.out.println("first "+request.getId());
-    // String   generated_resume = resumeservice.generateResume(user, request.getSkills(), request.getExperience(), request.getEducation(),request.getProjects(),request.getDescription(),request.getBasicInfo());
-//        Resume resumedata = user.getResumeData();
-//        resumedata.setSkills(request.getSkills());
-//        resumedata.setExperience(request.getExperience());
-//        resumedata.setEducation(request.getEducation());
-//        resumeservice.saveResume(user, resume);
-//        userservice.saveUser(user);
-        String generated_resume="ll";
+       System.out.println("first "+request.getId());
+    String   generated_resume = resumeservice.generateResume(user, request.getSkills(), request.getExperience(), request.getEducation(),request.getProjects(),request.getDescription(),request.getBasicInfo());
+       Resume resumedata = user.getResumeData();
+       resumedata.setSkills(request.getSkills());
+       resumedata.setExperience(request.getExperience());
+       resumedata.setEducation(request.getEducation());
+       resumeservice.saveResume(user, resume);
+       userservice.saveUser(user);
+      //  String generated_resume="ll";
         request.setContent(generated_resume);
         return ResponseEntity.ok(generated_resume);
     }
