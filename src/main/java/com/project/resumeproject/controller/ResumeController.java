@@ -52,8 +52,8 @@ public class ResumeController {
        resumedata.setSkills(request.getSkills());
        resumedata.setExperience(request.getExperience());
        resumedata.setEducation(request.getEducation());
-       resumeservice.saveResume(user, resume);
-       userservice.saveUser(user);
+       // resumeservice.saveResume(user, resume);
+       // userservice.saveUser(user);
       //  String generated_resume="ll";
         request.setContent(generated_resume);
         return ResponseEntity.ok(generated_resume);
