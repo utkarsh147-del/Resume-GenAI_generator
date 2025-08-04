@@ -23,7 +23,7 @@ window.addEventListener("load", function() {
     }
 
     // API call to /user/enable-2fa
-    fetch("http://localhost:8024/user/enable-2fa", {
+    fetch("/user/enable-2fa", {
         method: "GET",
         headers: {
             "Authorization": "Bearer " + token,
