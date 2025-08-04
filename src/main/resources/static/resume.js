@@ -118,7 +118,7 @@ window.addEventListener("load", function() {
             return;
         }
 		resumeContent.innerHTML = '<i class="fas fa-spinner loader"></i>';
-        fetch("http://localhost:8024/resume/generate-resume", {
+        fetch("/resume/generate-resume", {
             method: "POST",
             headers: {
                 "Authorization": "Bearer " + token,
@@ -159,7 +159,7 @@ window.addEventListener("load", function() {
             return;
         }
 
-        fetch("http://localhost:8024/resume/all", {
+        fetch("/resume/all", {
             method: "GET",
             headers: {
                 "Authorization": "Bearer " + token,
@@ -209,7 +209,7 @@ window.addEventListener("load", function() {
             return;
         }
 
-        fetch("http://localhost:8024/resume/get?resumename=" + encodeURIComponent(resumeName), { // Changed to 'resumename'
+        fetch("/resume/get?resumename=" + encodeURIComponent(resumeName), { // Changed to 'resumename'
             method: "GET",
             headers: {
                 "Authorization": "Bearer " + token,
@@ -287,7 +287,7 @@ function saveResume() {
         return;
     }
 
-    fetch("http://localhost:8024/resume/save-resume", {
+    fetch("/resume/save-resume", {
         method: "POST",
         headers: {
             "Authorization": "Bearer " + token,
@@ -335,7 +335,7 @@ function saveEditedResume() {
         return;
     }
 
-    fetch("http://localhost:8024/resume/update", {
+    fetch("/resume/update", {
         method: "PUT",
         headers: {
             "Authorization": "Bearer " + token,
@@ -446,7 +446,7 @@ function deleteResume(resumeName) {
         return;
     }
 
-    fetch(`http://localhost:8024/resume/delete-resume?resumeName=${encodeURIComponent(resumeName)}`, {
+    fetch(`/resume/delete-resume?resumeName=${encodeURIComponent(resumeName)}`, {
         method: "GET",
         headers: {
             "Authorization": "Bearer " + token,
