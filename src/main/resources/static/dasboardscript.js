@@ -78,7 +78,7 @@ window.addEventListener("load", function() {
     }
 
     if (window.location.pathname.includes("dashboard.html")) {
-        fetch("http://localhost:8024/user/profile", {
+        fetch("/user/profile", {
             method: "GET",
             headers: {
                 "Authorization": "Bearer " + token,
@@ -114,7 +114,7 @@ window.addEventListener("load", function() {
             return;
         }
 
-        fetch("http://localhost:8024/resume/generate-resume", {
+        fetch("/resume/generate-resume", {
             method: "POST",
             headers: {
                 "Authorization": "Bearer " + token,
@@ -154,7 +154,7 @@ window.addEventListener("load", function() {
             return;
         }
 
-        fetch("http://localhost:8024/resume/all", {
+        fetch("/resume/all", {
             method: "GET",
             headers: {
                 "Authorization": "Bearer " + token,
@@ -191,7 +191,7 @@ window.addEventListener("load", function() {
             return;
         }
 
-        fetch("http://localhost:8024/resume/get?name=" + encodeURIComponent(resumeName), {
+        fetch("/resume/get?name=" + encodeURIComponent(resumeName), {
             method: "GET",
             headers: {
                 "Authorization": "Bearer " + token,
@@ -255,7 +255,7 @@ function saveResume() {
 
     let resumeName = prompt("Enter a name for your resume:");
     if (resumeName) {
-        fetch("http://localhost:8024/resume/save", {
+        fetch("/resume/save", {
             method: "POST",
             headers: {
                 "Authorization": "Bearer " + token,
@@ -300,7 +300,7 @@ function saveEditedResume() {
         return;
     }
 
-    fetch("http://localhost:8024/resume/update", {
+    fetch("/resume/update", {
         method: "POST",
         headers: {
             "Authorization": "Bearer " + token,
