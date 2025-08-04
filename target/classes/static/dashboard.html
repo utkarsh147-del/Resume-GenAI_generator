@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResumeBuilderAI - Dashboard</title>
+    <link rel="stylesheet" href="dashboardstyles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>Dashboard</h1>
+        <p id="welcomeMessage"></p>
+        <form id="resumeForm">
+			<div class="form-group">
+                <label for="basic_info">Name and personal information</label>
+                <textarea id="basic_info" placeholder="Enter your name and basic info like phone number,linkedin,github or any other profile " name="basic_info" rows="3" required></textarea>
+            </div>
+			
+			<div class="form-group">
+                <label for="description">General Summary:</label>
+                <textarea id="description" placeholder="Enter summary of your working profile" name="description" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="skills">Skills:</label>
+                <textarea id="skills" placeholder="Enter your skills" name="skills" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="experience">Experience:</label>
+                <textarea id="experience" placeholder="Enter your working experience" name="experience" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="education">Education:</label>
+                <textarea id="education" placeholder="Enter your education" name="education" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="projects">Projects:</label>
+                <textarea id="projects" placeholder="Give information about your projects" name="projects" rows="3" required></textarea>
+            </div>
+            
+            <button type="button" onclick="generateResume()">Generate Resume</button>
+        </form>
+        <div class="dashboard-actions">
+            <button onclick="viewSavedResumes()">Saved Resumes</button>
+            <button onclick="logout()">Logout</button>
+        </div>
+        <div id="resumePreview" style="display: none; margin-top: 20px; text-align: left;"></div>
+        <p id="message"></p>
+    </div>
+    <script src="resume.js"></script>
+</body>
+</html>
