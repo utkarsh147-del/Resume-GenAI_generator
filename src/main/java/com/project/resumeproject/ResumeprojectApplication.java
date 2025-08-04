@@ -20,7 +20,10 @@ public class ResumeprojectApplication {
 			@Override
 			public void addCorsMappings(CorsRegistry reg)
 			{
-				reg.addMapping("/**").allowedOrigins("*");
+				reg.addMapping("/**").allowedOrigins("https://*.onrender.com", "http://localhost:[*]")
+				.allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+	               .allowedHeaders("*")
+	               .allowCredentials(true);
 			}
 		};
 		
