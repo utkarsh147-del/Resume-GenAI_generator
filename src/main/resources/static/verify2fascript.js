@@ -34,7 +34,7 @@ document.getElementById("verify2FAForm").addEventListener("submit", function(eve
     }
 
     // API call to /user/verify-2fa
-    fetch("http://localhost:8024/user/verify-2fa", {
+    fetch("/user/verify-2fa", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
