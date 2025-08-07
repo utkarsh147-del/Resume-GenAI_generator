@@ -48,10 +48,10 @@ public class ResumeController {
         
        System.out.println("first "+request.getId());
     String   generated_resume = resumeservice.generateResume(user, request.getSkills(), request.getExperience(), request.getEducation(),request.getProjects(),request.getDescription(),request.getBasicInfo());
-       Resume resumedata = user.getResumeData();
-       resumedata.setSkills(request.getSkills());
-       resumedata.setExperience(request.getExperience());
-       resumedata.setEducation(request.getEducation());
+    //   Resume resumedata = user.getResumeData();
+    //   resumedata.setSkills(request.getSkills());
+       // resumedata.setExperience(request.getExperience());
+       // resumedata.setEducation(request.getEducation());
        // resumeservice.saveResume(user, resume);
        // userservice.saveUser(user);
       //  String generated_resume="ll";
