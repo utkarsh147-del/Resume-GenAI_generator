@@ -69,12 +69,16 @@ Resumerepository resumerepository;
 	  
 	  @Value("${spring.ai.key2}")
 	  private String aikey2;
+	 @Value("${spring.ai.key3}")
+	  private String aikey3;
 	  
 	  @Value("${spring.aimodel1}")
 	  private String aimodel1;
 	  
 	  @Value("${spring.aimodel2}")
 	  private String aimodel2;
+
+	
 	
 	 public String generateResume(Users user, String skills, String experience, String education,String project,String description,String basicinfo) {
 	        String prompt = "Generate a professional resume based on the following details:\n" +
@@ -107,7 +111,7 @@ Resumerepository resumerepository;
 	            HttpRequest request = HttpRequest.newBuilder()
 	                .uri(URI.create("https://openrouter.ai/api/v1/chat/completions"))
 	                .header("Content-Type", "application/json")
-	                .header("Authorization", "Bearer "+aikey1)
+	                .header("Authorization", "Bearer "+aikey3)
 	                .header("HTTP-Referer", "<YOUR_SITE_URL>") // Optional, replace with your URL
 	                .header("X-Title", "<YOUR_SITE_NAME>") // Optional, replace with your site name
 	                .POST(HttpRequest.BodyPublishers.ofString(payload.toString()))
