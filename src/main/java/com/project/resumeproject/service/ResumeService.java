@@ -103,7 +103,7 @@ Resumerepository resumerepository;
 	            JSONArray messages = new JSONArray();
 	            JSONObject message = new JSONObject();
 	            message.put("role", "user");
-	            message.put("content", prompt); // Ensure prompt is not null/empty
+	            message.put("content", prompt); 
 	            messages.put(message);
 	            payload.put("messages", messages);
 
@@ -112,8 +112,8 @@ Resumerepository resumerepository;
 	                .uri(URI.create("https://openrouter.ai/api/v1/chat/completions"))
 	                .header("Content-Type", "application/json")
 	                .header("Authorization", "Bearer "+aikey3)
-	                .header("HTTP-Referer", "<YOUR_SITE_URL>") // Optional, replace with your URL
-	                .header("X-Title", "<YOUR_SITE_NAME>") // Optional, replace with your site name
+	                .header("HTTP-Referer", "<YOUR_SITE_URL>") 
+	                .header("X-Title", "<YOUR_SITE_NAME>") 
 	                .POST(HttpRequest.BodyPublishers.ofString(payload.toString()))
 	                .build();
 
