@@ -19,7 +19,7 @@ public class JWTutils {
 
     private static final String SECRET_STRING = "Ro7y2iamjEy8LFV2hw+PlaC45HU+cdrboFa2mb0BrX8="; 
     private static final Key SECRET_KEY = Keys.hmacShaKeyFor(SECRET_STRING.getBytes());
-    private static final long EXPIRATION_TIME = 96400000; // 1 hour in milliseconds
+    private static final long EXPIRATION_TIME = 96400000; 
 
 
     public static String generateToken(String username) {
@@ -33,7 +33,7 @@ public class JWTutils {
                 .setSubject(subject)
                 .setIssuedAt(new Date(System.currentTimeMillis()))
                 .setExpiration(new Date(System.currentTimeMillis() + EXPIRATION_TIME))
-                .signWith(SECRET_KEY, SignatureAlgorithm.HS256) // Use HS256 algorithm
+                .signWith(SECRET_KEY, SignatureAlgorithm.HS256) 
                 .compact();
     }
 
